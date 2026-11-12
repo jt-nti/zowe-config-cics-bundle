@@ -1,0 +1,57 @@
+{
+    "$schema": "./zowe.schema.json",
+    // For more information about profile types, see
+    // https://docs.zowe.org/v3.0.x/user-guide/cli-using-using-team-profiles
+    "profiles": {
+        // Parent profile
+        "example": {
+            // Common properties for all the example services
+            "properties": {
+                "protocol": "https",
+                "rejectUnauthorized": false,
+                "host": "example.org"
+            },
+            // Service profiles
+            "profiles": {
+                "zosmf": {
+                    "type": "zosmf",
+                    "properties": {
+                        "port": 443
+                    }
+                },
+                "ssh": {
+                    "type": "ssh",
+                    "properties": {
+                        "port": 22
+                    }
+                },
+                "rse": {
+                    "type": "rse",
+                    "properties": {
+                        "port": 6800,
+                        "basePath": "rseapi"
+                    }
+                },
+                "cics": {
+                    "type": "cics",
+                    "properties": {
+                        "protocol": "http",
+                        "port": 27100
+                    }
+                }
+            },
+            // Values that should be stored securely
+            "secure": [
+                "user",
+                "password"
+            ]
+        }
+    },
+    "defaults": {
+        "zosmf": "example.zosmf",
+        "ssh": "example.ssh",
+        "rse": "example.rse",
+        "cics": "example.cics"
+    },
+    "autoStore": true
+}

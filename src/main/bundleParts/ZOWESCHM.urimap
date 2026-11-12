@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cicsdefinitionurimap characterset="UTF-8" description="Host the Zowe team schema file in CICS" hfsfile="zowe.schema.json" host="*" hostcodepage="1208" mediatype="application/json" name="ZOWESCHM" path="zowe.schema.json" scheme="HTTP" tcpipservice="ZOWECFG" usage="SERVER" xmlns="http://www.ibm.com/xmlns/prod/CICS/smw2int"/>
