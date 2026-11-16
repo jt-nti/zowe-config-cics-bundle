@@ -41,6 +41,7 @@ cicsBundle {
     }
 }
 
-// TODO so far no luck getting buildCICSBundle to pick up the output of processResources in one gradle build
-// tasks.getByName('buildCICSBundle').dependsOn(tasks.getByName('processResources'))
-// tasks.getByName('buildCICSBundle').mustRunAfter(tasks.getByName('processResources'))
+tasks.named('buildCICSBundle') {
+    dependsOn tasks.named('processResources')
+    resourcesDirectory.set(layout.dir(tasks.named('processResources', ProcessResources).map { new File(it.destinationDir, 'bundleParts') }))
+}

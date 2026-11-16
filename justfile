@@ -33,15 +33,12 @@ clean:
 
 # Build the Zowe config CICS bundle using gradle
 build:
-    gradle processResources
     gradle buildCICSBundle
 
 # Package the Zowe config CICS bundle into a zipped archive using gradle
 package:
-    gradle processResources
     gradle packageCICSBundle
 
 # Deploy the Zowe config CICS bundle using gradle
 deploy:
-    gradle processResources
     gradle deployCICSBundle --stacktrace
