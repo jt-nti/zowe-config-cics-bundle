@@ -9,7 +9,7 @@
             "properties": {
                 "protocol": "https",
                 "rejectUnauthorized": false,
-                "host": "example.org"
+                "host": "example.com"
             },
             // Service profiles
             "profiles": {
